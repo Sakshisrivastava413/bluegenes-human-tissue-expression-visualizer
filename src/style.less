@@ -18,13 +18,7 @@
       display: flex;
 
       .graph {
-				.chart-title {
-					font-weight: 300;
-					font-size: 24px;
-					font-family: sans-serif;
-					display: flex;
-          justify-content: center;
-        }
+        width: 100%;
         .loading {
           position: fixed;
           display: block; 
@@ -63,8 +57,8 @@
             transform: translateZ(0) scale(1);
             backface-visibility: hidden;
             transform-origin: 0 0;
-            left: calc(100vw - 52rem);
-            top: calc(100vh - 40rem);
+            left: 45%;
+            top: 45%;
           }
           .inner-loading-container div { box-sizing: content-box; }
         }
@@ -79,17 +73,18 @@
         }
 
         .graph-container {
-          height: 440px;
+          height: 400px;
+          width: 100%;
           margin: 20px 0;
-          overflow-y: scroll;
+          overflow: scroll;
         }
 
         .lower-container {
           display: flex;
-          justify-content: space-evenly;
+          justify-content: space-between;
 
           .filter-panel-root {
-            width: 60%;
+            width: 65%;
             margin: auto;
             text-align: center;
             border: solid 1px black;
@@ -103,7 +98,7 @@
             }
 
             .filter-panel {
-              padding: 30px;
+              padding: 20px 30px;
 
               .filter-container {
                 display: flex;
@@ -112,14 +107,14 @@
                 font-weight: 300;
                 font-family: sans-serif;
                 .tissue-filter {
-                  width: 30rem;
+                  width: 60%;
                   margin-right: 50px;
                   .dropdown {
                     margin: 10px 0 0 0;
                   }
                 }
                 .expression-filter {
-                  width: calc(60% - 11rem);
+                  width: 40%;
                   .filter-option {
                     display: flex;
                     justify-content: space-between;
@@ -128,7 +123,7 @@
                     font-family: arial;
 
                     .option {
-                        padding: 8px 15px;
+                        padding: 8px 12px;
                         cursor: pointer;
                     }
                     .selected {
@@ -146,11 +141,14 @@
                     }
                     label {
                         cursor: pointer;
+                        margin: 0;
+                        color: inherit;
+                        font-size: 14px;
                     }
                   }
                 }
                 .data-set-filter {
-                  width: 30rem;
+                  width: 60%;
                   margin-right: 50px;
                   .filter-option {
                     display: flex;
@@ -160,7 +158,7 @@
                     font-family: arial;
 
                     .option {
-                        padding: 8px 15px;
+                        padding: 8px;
                         cursor: pointer;
                     }
                     .selected {
@@ -178,11 +176,14 @@
                     }
                     label {
                         cursor: pointer;
+                        margin: 0;
+                        color: inherit;
+                        font-size: 14px;
                     }
                   }
                 }
                 .scale-filter {
-                  width: calc(60% - 11rem);;
+                  width: 40%;
                   .filter-option {
                     display: flex;
                     justify-content: space-between;
@@ -191,7 +192,7 @@
                     font-family: arial;
 
                     .option {
-                        padding: 8px 6px;
+                        padding: 8px;
                         cursor: pointer;
                     }
                     .selected {
@@ -209,6 +210,9 @@
                     }
                     label {
                         cursor: pointer;
+                        margin: 0;
+                        color: inherit;
+                        font-size: 14px;
                     }
                   }
                 }

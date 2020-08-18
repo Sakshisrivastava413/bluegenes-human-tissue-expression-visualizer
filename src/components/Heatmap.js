@@ -6,7 +6,7 @@ const Heatmap = ({ graphData, tissueList, labelHeight, graphHeight }) => {
 	return (
 		<div
 			style={{
-				width: 'calc(100vw - 5rem)',
+				width: '100%',
 				height: graphHeight,
 				textAlign: 'center',
 				overflowX: 'scroll',

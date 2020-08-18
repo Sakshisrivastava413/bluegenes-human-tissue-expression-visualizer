@@ -150,10 +150,6 @@ const RootContainer = ({ serviceUrl, entity }) => {
 		<div className="rootContainer">
 			<div className="innerContainer">
 				<div className="graph">
-					<span className="chart-title">
-						Gene Tissue Expression{' '}
-						{selectedDataSet.length && `- ${selectedDataSet}`}
-					</span>
 					{loading ? (
 						<div className="loading">
 							<Loading />
@@ -161,9 +157,7 @@ const RootContainer = ({ serviceUrl, entity }) => {
 					) : (
 						<></>
 					)}
-					<div
-						style={{ width: !heatmapData.length ? 'calc(100vw - 5rem)' : '' }}
-					>
+					<div>
 						{heatmapData.length ? (
 							<div className="graph-container">
 								<Heatmap
