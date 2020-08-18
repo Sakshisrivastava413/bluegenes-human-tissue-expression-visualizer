@@ -63,13 +63,14 @@ const FilterPanel = ({
 											? 'option selected'
 											: 'option not-selected'
 									}
+									onClick={() => filterDataSet(term)}
 									key={term}
 								>
 									<input
 										type="checkbox"
 										id={term}
 										value={term}
-										onChange={filterDataSet}
+										onChange={e => filterDataSet(e.target.value)}
 										checked={selectedDataSet == term}
 									/>
 									<label htmlFor={term}>{term}</label>
@@ -88,12 +89,13 @@ const FilterPanel = ({
 											: 'option not-selected'
 									}
 									key={term}
+									onClick={() => scaleFilter(term)}
 								>
 									<input
 										type="radio"
 										id={term}
 										value={term}
-										onChange={scaleFilter}
+										onChange={e => scaleFilter(e.target.value)}
 										checked={selectedScale === term}
 									/>
 									<label htmlFor={term}>{term}</label>

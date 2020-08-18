@@ -179,10 +179,10 @@ const RootContainer = ({ serviceUrl, entity }) => {
 								selectedExpression={selectedExpression}
 								expressionLevelFilter={expressionLevelFilter}
 								selectedScale={selectedScale}
-								scaleFilter={e => changeScale(e.target.value)}
+								scaleFilter={e => changeScale(e)}
 								filterTissue={() => setHeatmapTissueList(selectedTissue)}
 								selectedDataSet={selectedDataSet}
-								filterDataSet={e => changeDataSet(e.target.value)}
+								filterDataSet={e => changeDataSet(e)}
 							/>
 							{heatmapData.length ? (
 								<div className="legend">
